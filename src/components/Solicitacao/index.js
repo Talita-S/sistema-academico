@@ -4,6 +4,8 @@ import { createTheme, ThemeProvider } from "@mui/material/styles";
 import AddBoxOutlinedIcon from "@mui/icons-material/AddBoxOutlined";
 import { Paper, Typography, Button, Modal, Box } from "@mui/material";
 
+import FormSolicitacao from "../FormSolicitacao";
+
 const theme = createTheme({
   palette: {
     primary: {
@@ -30,6 +32,7 @@ const modalStyle = {
   left: "50%",
   transform: "translate(-50%, -50%)",
   width: 400,
+  textAlign: "center",
   bgcolor: "background.paper",
   border: "1px solid rgba(222,222,222,0.5)",
   boxShadow: 24,
@@ -65,6 +68,7 @@ function Solicitacao() {
             <Typography id="modal-modal-title" variant="h5" component="h2">
               Solicitação
             </Typography>
+            <FormSolicitacao />
           </Box>
         </Modal>
       </Paper>
