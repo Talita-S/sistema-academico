@@ -58,11 +58,11 @@ function FormSolicitacao() {
 
   return (
     <FormControl sx={{ paddingTop: 2, textAlign: "center" }}>
-      <Grid container textAlign="center">
+      <Grid textAlign="center" justifyContent="center">
         {carregando && <CircularProgress />}
         {sucesso && <MsgSucesso />}
         {erro && <MsgErro />}
-      </Grid>
+      </Grid>s
 
       <TextField
         label="Assunto"
