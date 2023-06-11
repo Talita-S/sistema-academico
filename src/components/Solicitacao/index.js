@@ -5,6 +5,7 @@ import AddBoxOutlinedIcon from "@mui/icons-material/AddBoxOutlined";
 import { Paper, Typography, Button, Modal, Box } from "@mui/material";
 
 import FormSolicitacao from "../FormSolicitacao";
+import ListarSolicitacoes from "../ListarSolicitacoes";
 
 const theme = createTheme({
   palette: {
@@ -44,10 +45,14 @@ function Solicitacao() {
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
 
+  const logo =
+    "https://sp-ao.shortpixel.ai/client/to_webp,q_lossy,ret_img,w_1486,h_663/https://www.fatecclub.gregmaster.com.br/wp-content/uploads/2018/09/logo-fatec.png";
+
   return (
     <ThemeProvider theme={theme}>
       <Paper style={paperStyle} elevation={6}>
-        <Typography variant="h4" m={4}>
+        <img src={logo} alt="Logo" width={200} />
+        <Typography variant="h4" m={4} color="#4c6d6e">
           Secretaria Acadêmica
         </Typography>
 
@@ -71,6 +76,13 @@ function Solicitacao() {
             <FormSolicitacao />
           </Box>
         </Modal>
+        <Box sx={{ margin: 15 }}>
+          <Typography variant="h6" textAlign="left" color="#4c6d7a">
+            Minhas Solicitações
+          </Typography>{" "}
+          <hr />
+          <ListarSolicitacoes />
+        </Box>
       </Paper>
     </ThemeProvider>
   );
