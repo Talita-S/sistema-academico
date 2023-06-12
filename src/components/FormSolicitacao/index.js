@@ -62,7 +62,7 @@ function FormSolicitacao() {
         {carregando && <CircularProgress />}
         {sucesso && <MsgSucesso />}
         {erro && <MsgErro />}
-      </Grid>s
+      </Grid>
 
       <TextField
         label="Assunto"
