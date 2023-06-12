@@ -2,9 +2,14 @@ import React, { useState, useEffect } from "react";
 
 import { DataGrid } from "@mui/x-data-grid";
 
-function index({rows, columns}) {
+const tabelaStyle = {
+  width: "100vw",
+  height: "400px"
+}
+
+function index({rows, columns, handleClick}) {
   return (
-    <DataGrid rows={rows} columns={columns} width="100%"/>
+    <DataGrid rows={rows} columns={columns} style={tabelaStyle} onRowClick={(params) => handleClick(params.row)}/>
   );
 }
 
